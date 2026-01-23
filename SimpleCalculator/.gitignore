@@ -1,0 +1,16 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.sln.docstates
+
+# Build folders
+bin/
+obj/
+
+# IDE
+.idea/
+
+# NuGet
+*.nupkg
+packages/
