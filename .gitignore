@@ -14,3 +14,13 @@ obj/
 # NuGet
 *.nupkg
 packages/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.sln.docstates
+
+# Build folders
+bin/
+obj/
