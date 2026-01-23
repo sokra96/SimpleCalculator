@@ -1,16 +1,21 @@
-# Simple Calculator – Stage 0
+# Simple Calculator
 
-This is the initial version of the Simple Calculator project.
+## Stage 1 – Input Validation and Basic Operations
 
-## Features
+### Description
+This is a simple console calculator built in C#.  
+In Stage 1, the calculator supports:
 
-- Takes **two integer inputs** from the user.
-- Performs **addition** only.
-- Displays the result on the console.
+- Addition (`+`) and Subtraction (`-`)
+- Input validation: only numeric values are accepted
+- User is prompted again if they enter invalid input
+- User is prompted again if they enter an invalid operation
 
-## Notes
+### Usage
+1. Run the program.
+2. Enter the first number (integer).
+3. Enter the second number (integer).
+4. Choose the operation (`+` or `-`).
+5. The result will be displayed.
 
-- No input validation yet.
-- No menu for choosing operations.
-- Designed to be a minimal working version (Stage 0).
-
+### Example
