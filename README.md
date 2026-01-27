@@ -1,21 +1,33 @@
-# Simple Calculator
+# 🧮 Simple Calculator (C# Console App)
 
-## Stage 1 – Input Validation and Basic Operations
+A simple console-based calculator written in C#.  
+This project is part of my learning journey through a C# Masterclass course.
 
-### Description
-This is a simple console calculator built in C#.  
-In Stage 1, the calculator supports:
+---
 
-- Addition (`+`) and Subtraction (`-`)
-- Input validation: only numeric values are accepted
-- User is prompted again if they enter invalid input
-- User is prompted again if they enter an invalid operation
+## 🚀 Features (Stage 2)
 
-### Usage
-1. Run the program.
-2. Enter the first number (integer).
-3. Enter the second number (integer).
-4. Choose the operation (`+` or `-`).
-5. The result will be displayed.
+- Accepts only valid integer input (`int.TryParse`)
+- Supports all basic operations:
+  - ➕ Addition
+  - ➖ Subtraction
+  - ✖ Multiplication
+  - ➗ Division (with division-by-zero protection)
+- Validates user input for both numbers and operations
+- Allows multiple calculations in a loop
+- Clears the console for better user experience
 
-### Example
+---
+
+## 🛠 Technologies
+
+- C#
+- .NET Console Application
+
+---
+
+## ▶ How to Run
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/sokra96/SimpleCalculator.git
