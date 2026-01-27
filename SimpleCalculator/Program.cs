@@ -2,44 +2,75 @@
 
 Console.WriteLine("Welcome to Simple Calculator!");
 
-Console.WriteLine("Εnter the first number: ");
-int num1;
-while (!int.TryParse(Console.ReadLine(), out num1))
-{
-    Console.WriteLine("Invalid input! Please enter a number");
-}
-
-Console.WriteLine("Enter the second number: ");
-int num2;
-while (!int.TryParse(Console.ReadLine(), out num2))
-{
-    Console.WriteLine("Invalid input! Please enter a number");
-}
-
-
-int result;
 while (true)
 {
-    Console.WriteLine("Enter operation (+ or -): ");
-    String operation = Console.ReadLine();
+    Console.Clear();
+    Console.WriteLine("Εnter the first number: ");
+    int num1;
+    while (!int.TryParse(Console.ReadLine(), out num1))
+    {
+        Console.WriteLine("Invalid input! Please enter a number: ");
+    }
+
+
+
+    Console.WriteLine("Enter the second number: ");
+    int num2;
+    while (!int.TryParse(Console.ReadLine(), out num2))
+    {
+        Console.WriteLine("Invalid input! Please enter a number: ");
+    }
+
+    string operation;
+    while (true)
+    {
+        Console.WriteLine("Enter operation (+, -, * or / ): ");
+        operation = Console.ReadLine();
+        if (operation == "+" || operation == "-" || operation == "*" || operation == "/")
+        {
+            break;
+        }
+        Console.WriteLine("Invalid operation! Please enter +, -, * or /.");
+    }
+    int result = 0;
+
     if (operation == "+")
     {
         result = num1 + num2;
-        break;
     }
     else if (operation == "-")
     {
         result = num1 - num2;
+    }
+    else if (operation == "*")
+    {
+        result = num1 * num2;
+    }
+    else if (operation == "/")
+    {
+        while (num2 == 0)
+        {
+            Console.WriteLine("Division by 0 is not a valid operation, please enter a new number: ");
+            while (!int.TryParse(Console.ReadLine(), out num2))
+            {
+                Console.WriteLine("Invalid input! Please enter a number: ");
+            }
+
+        }
+        result = num1 / num2;
+    }
+
+    Console.WriteLine("Result is : " + result);
+    Console.WriteLine("Do you want to perform another calculation? (y/n): ");
+    string again = Console.ReadLine().ToLower();
+    if (again != "y")
+    {
         break;
     }
-    else
-    {
-        Console.WriteLine("Please enter a valid operation (+ or -)");
-    }
-   
+
 }
-Console.WriteLine("Result is : " + result);
-Console.ReadKey();
+
+
 
 
 
