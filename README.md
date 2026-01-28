@@ -1,33 +1,37 @@
-# 🧮 Simple Calculator (C# Console App)
+# 🧮 Simple Calculator (C# – OOP Version)
 
-A simple console-based calculator written in C#.  
-This project is part of my learning journey through a C# Masterclass course.
-
----
-
-## 🚀 Features (Stage 2)
-
-- Accepts only valid integer input (`int.TryParse`)
-- Supports all basic operations:
-  - ➕ Addition
-  - ➖ Subtraction
-  - ✖ Multiplication
-  - ➗ Division (with division-by-zero protection)
-- Validates user input for both numbers and operations
-- Allows multiple calculations in a loop
-- Clears the console for better user experience
+A console-based calculator application written in C# using Object-Oriented Programming principles.  
+This project demonstrates clean design, validation, error handling, and calculation history.
 
 ---
 
-## 🛠 Technologies
+## 🚀 Features
 
-- C#
-- .NET Console Application
+- ➕ Addition, ➖ Subtraction, ✖ Multiplication, ➗ Division  
+- ✅ Full input validation  
+- 🚫 Division by zero handling  
+- 🧠 OOP design with a dedicated `Calculation` class  
+- 🕒 Timestamp for each calculation  
+- 📜 Calculation history  
+- 🔁 Loop for multiple calculations
 
 ---
 
-## ▶ How to Run
+## 🏗️ Project Structure
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/sokra96/SimpleCalculator.git
+- `Calculation.cs`  
+  Handles:
+  - Validation of inputs  
+  - Performing calculations  
+  - Storing result & timestamp  
+
+- `Program.cs`  
+  Handles:
+  - User interaction (console input/output)  
+  - Main application loop  
+  - History display  
+
+---
+
+## 🧩 Example Output
+
