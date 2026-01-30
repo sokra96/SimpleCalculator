@@ -23,21 +23,43 @@ while (true)
         if (option == 1)
         {
             Calculation calculation = new Calculation();
-            double num1 = ReadNumber("Enter the first number: ");
-            double num2 = ReadNumber("Enter the second number: ");
-            string operation = ReadOperation();
-            string result = calculation.PerformCalculation(num1, num2, operation);
-            Console.WriteLine(result);
-            history.Add(calculation);
+            double currentResult = ReadNumber("Enter a number: ");
+            string expression = currentResult.ToString();
+            while (true)
+            {
+                string operation = ReadOperation();
+                if (operation == "=")
+                {
+                    Calculation finalCalculation = new Calculation();
+                    finalCalculation.SetFinalResult(expression, currentResult);
+                    history.Add(finalCalculation);
+                    Console.WriteLine($"{expression} = {currentResult} ");
+                    break;
+                }
+                double num2 = ReadNumber("Enter the next number: ");
+                try
+                {
+                    currentResult = calculation.PerformCalculation(currentResult, num2, operation);
+                    Console.WriteLine(currentResult);
+                    expression += $" {operation} {num2}";
+                } catch (DivideByZeroException ex)
+                {
+                    Console.WriteLine(ex.Message);
+                    Console.WriteLine(currentResult);
+                }
+              
+            }
             Console.WriteLine("Press any key to return to menu...");
             Console.ReadKey();
+
+
         }
         else if (option == 2)
         {
             Console.WriteLine("----- History -----");
             foreach (var h in history)
             {
-                Console.WriteLine($"{h.Num1} {h.Operation} {h.Num2} = {h.Result} (at {h.CreatedAt})");
+                Console.WriteLine($"{h.Expression} = {h.FinalResult} (at {h.CreatedAt})");
             }
             Console.WriteLine("Press any key to return to menu...");
             Console.ReadKey();
@@ -85,13 +107,13 @@ static string ReadOperation()
 {
     while (true)
     {
-        Console.Write("Enter operation (+, -, *, /): ");
+        Console.Write("Enter operation (+, -, *, /, =): ");
         string operation = Console.ReadLine();
 
-        if (operation == "+" || operation == "-" || operation == "*" || operation == "/")
+        if (operation == "+" || operation == "-" || operation == "*" || operation == "/" || operation == "=")
             return operation;
 
-        Console.WriteLine("Invalid operation. Please enter +, -, * or /.\n");
+        Console.WriteLine("Invalid operation. Please enter +, -, *, / or = .\n");
     }
 }
 
