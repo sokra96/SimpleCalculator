@@ -1,28 +1,25 @@
-# Simple Calculator (OOP Version)
+# Simple Calculator
 
-A console-based simple calculator implemented in **C#** using object-oriented programming.
-
-This version supports basic arithmetic operations, input validation, calculation history, and a simple menu system.
+A console-based calculator written in C# with Object-Oriented design.
 
 ## Features
 
-- Basic arithmetic: addition (+), subtraction (-), multiplication (*), division (/)
-- Input validation for numbers and operations
-- Handles division by zero
-- Tracks calculation history with timestamps
-- Simple menu:
-  1. New calculation
-  2. Show history
-  3. Exit
-- Object-Oriented design:
-  - `Calculation` class handles calculation logic, validation, and timestamp
+- Supports basic arithmetic operations: addition (+), subtraction (-), multiplication (*), division (/)
+- Continuous calculations: perform multiple operations in a single session
+- Final result is displayed when `=` is entered
+- Tracks calculation history with full expressions
+- Handles division by zero without resetting the ongoing calculation
 
 ## Usage
 
-1. Clone the repository
-2. Open the project in Visual Studio
-3. Build and run the project
-4. Use the menu to perform calculations or view history
+1. Run the program.
+2. Choose an option from the menu:
+   - `1` New calculation
+   - `2` Show history
+   - `3` Exit
+3. Enter numbers and operations as prompted.
+4. Use `=` to finish a calculation and add it to history.
+5. View history to see previous calculations with results and timestamps.
 
 ## Example
 
